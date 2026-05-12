@@ -48,8 +48,12 @@
 
 /* Carousel */
 .testimonials__carousel {
-  overflow: hidden;
   position: relative;
+}
+
+.testimonials__slides-wrapper {
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
 }
 
 .testimonials__slides {
@@ -114,12 +118,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--space-xl);
 }
 
 .testimonials__dots {
   display: flex;
-  gap: 8px;
+  gap: 12px;
+  padding: 8px 0;
+  align-items: center;
 }
 
 .testimonials__dot {

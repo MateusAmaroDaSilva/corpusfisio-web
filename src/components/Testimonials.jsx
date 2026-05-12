@@ -46,20 +46,22 @@ export default function Testimonials() {
           </div>
 
           <div className="testimonials__carousel">
-            <div className="testimonials__slides" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-              {testimonials.map((item) => (
-                <div className="testimonials__slide" key={item.id}>
-                  <div className="testimonials__quote-icon">"</div>
-                  <p className="testimonials__text">{item.text}</p>
-                  <div className="testimonials__author">
-                    <div className="testimonials__author-info">
-                      <h4 className="testimonials__author-name">{item.name}</h4>
-                      <span className="testimonials__author-desc">{item.info}</span>
+            <div className="testimonials__slides-wrapper">
+              <div className="testimonials__slides" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                {testimonials.map((item) => (
+                  <div className="testimonials__slide" key={item.id}>
+                    <div className="testimonials__quote-icon">"</div>
+                    <p className="testimonials__text">{item.text}</p>
+                    <div className="testimonials__author">
+                      <div className="testimonials__author-info">
+                        <h4 className="testimonials__author-name">{item.name}</h4>
+                        <span className="testimonials__author-desc">{item.info}</span>
+                      </div>
+                      <span className="testimonials__tag">{item.tag}</span>
                     </div>
-                    <span className="testimonials__tag">{item.tag}</span>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             <div className="testimonials__controls">

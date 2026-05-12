@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../assets/images/Logo-CorpusFisio.jpeg'
+import logo from '../assets/images/Logo_CorpusFisio.png'
 import './Navbar.css'
 
 export default function Navbar() {
