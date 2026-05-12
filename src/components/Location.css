@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════════
+   Location Section
+   ═══════════════════════════════════════ */
+
+.location {
+  padding: var(--space-section) 0;
+  background: var(--color-white);
+  position: relative;
+}
+
+.location__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.location__desc {
+  color: var(--color-gray-600);
+  line-height: var(--lh-loose);
+  margin-bottom: var(--space-xl);
+  font-size: var(--fs-body);
+}
+
+.location__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.location__item {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.location__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--color-cream);
+  color: var(--color-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-gray-100);
+}
+
+.location__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.location__item h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-gray-800);
+  margin-bottom: 0.3rem;
+}
+
+.location__item p {
+  font-size: var(--fs-small);
+  color: var(--color-gray-500);
+  line-height: var(--lh-body);
+}
+
+/* Map */
+.location__map {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+
+.location__map-wrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.location__map-wrapper iframe {
+  filter: grayscale(20%) contrast(1.1); /* Subtle adjustment to fit aesthetic better */
+}
+
+.location__map-overlay {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.location__map-overlay .btn {
+  box-shadow: 0 8px 32px rgba(10, 173, 207, 0.4);
+}
+
+/* ── Mobile ── */
+@media (max-width: 900px) {
+  .location__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .location__map {
+    position: relative;
+    height: 400px;
+    margin-top: var(--space-md);
+  }
+}

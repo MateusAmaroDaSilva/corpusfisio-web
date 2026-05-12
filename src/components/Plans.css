@@ -1,0 +1,239 @@
+/* ═══════════════════════════════════════
+   Plans Section
+   ═══════════════════════════════════════ */
+
+.plans {
+  padding: var(--space-section) 0;
+  background: var(--color-cream-dark);
+}
+
+.plans__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+}
+
+.plans__header .section-subtitle {
+  margin: 0 auto;
+}
+
+.plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  align-items: stretch;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Card */
+.plans__card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg) var(--space-md);
+  min-height: 580px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.plans__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.plans__card--recommended {
+  background: var(--gradient-teal);
+  color: var(--color-white);
+  box-shadow: var(--shadow-teal);
+  transform: scale(1.05);
+  border: none;
+  z-index: 2;
+}
+
+.plans__card--recommended:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 50px rgba(10,173,207,0.3);
+}
+
+/* Badge */
+.plans__badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: var(--color-white);
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(201, 169, 110, 0.4);
+}
+
+/* Header */
+.plans__card-header {
+  text-align: center;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.plans__card--recommended .plans__card-header {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.plans__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--color-gray-800);
+  margin-bottom: 0.2rem;
+}
+
+.plans__card--recommended .plans__name {
+  color: var(--color-white);
+}
+
+.plans__subtitle {
+  font-size: var(--fs-small);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-md);
+}
+
+.plans__card--recommended .plans__subtitle {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.plans__price-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.plans__price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-teal);
+}
+
+.plans__card--recommended .plans__price {
+  color: var(--color-white);
+  font-size: 1.8rem;
+}
+
+.plans__period {
+  font-size: var(--fs-small);
+  color: var(--color-gray-500);
+}
+
+.plans__card--recommended .plans__period {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Features */
+.plans__features {
+  flex-grow: 1;
+  margin-bottom: var(--space-lg);
+  padding: 0 var(--space-sm);
+}
+
+.plans__features ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.plans__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: var(--fs-small);
+  color: var(--color-gray-600);
+  line-height: var(--lh-snug);
+}
+
+.plans__card--recommended .plans__features li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.plans__features svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.plans__card--recommended .plans__features svg {
+  color: var(--color-gold-light);
+}
+
+/* Action */
+.plans__action {
+  text-align: center;
+}
+
+.plans__action .btn {
+  width: 100%;
+  padding: 1rem;
+}
+
+.plans__card--recommended .plans__action .btn {
+  background: var(--color-white);
+  color: var(--color-teal);
+  box-shadow: none;
+}
+
+.plans__card--recommended .plans__action .btn::before {
+  display: none;
+}
+
+.plans__card--recommended .plans__action .btn:hover {
+  background: var(--color-gray-50);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Info bottom */
+.plans__info {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  font-size: var(--fs-small);
+  color: var(--color-gray-500);
+}
+
+.plans__info a {
+  color: var(--color-teal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.plans__info a:hover {
+  text-decoration-color: var(--color-teal);
+}
+
+/* ── Mobile ── */
+@media (max-width: 900px) {
+  .plans__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    max-width: 400px;
+  }
+
+  .plans__card--recommended {
+    transform: none;
+  }
+  
+  .plans__card--recommended:hover {
+    transform: translateY(-5px);
+  }
+}

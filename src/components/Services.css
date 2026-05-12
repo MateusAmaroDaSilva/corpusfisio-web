@@ -1,0 +1,221 @@
+/* ═══════════════════════════════════════
+   Services Section
+   ═══════════════════════════════════════ */
+
+.services {
+  padding: var(--space-section) 0;
+  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background element */
+.services::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: var(--color-teal-glow);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.services__header .section-subtitle {
+  margin: 0 auto;
+}
+
+/* Tabs */
+.services__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.services__tab {
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--color-gray-500);
+  background: transparent;
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.services__tab:hover {
+  color: var(--color-gray-800);
+  border-color: var(--color-gray-300);
+}
+
+.services__tab.active {
+  background: var(--gradient-teal);
+  color: var(--color-white);
+  border-color: transparent;
+  box-shadow: var(--shadow-teal);
+}
+
+.services__tab:nth-child(2).active {
+  background: var(--gradient-purple);
+  box-shadow: var(--shadow-purple);
+}
+
+/* Content Pane */
+.services__content {
+  position: relative;
+  z-index: 1;
+}
+
+.services__pane {
+  display: none;
+  animation: scaleIn 0.5s var(--ease-out-expo) forwards;
+}
+
+.services__pane.active {
+  display: block;
+}
+
+.services__pane-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+/* Images */
+.services__image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.services__image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  transition: transform 10s ease;
+}
+
+.services__image:hover img {
+  transform: scale(1.05);
+}
+
+.services__image-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-teal-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.services__image-badge--purple {
+  color: var(--color-purple-dark);
+  right: var(--space-md);
+  left: auto;
+}
+
+/* Cards List */
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.services__card {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.services__card:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-teal-light);
+}
+
+.services__pane:nth-child(2) .services__card:hover {
+  border-color: var(--color-purple-light);
+}
+
+.services__card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--color-teal-glow);
+  color: var(--color-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services__card-icon--purple {
+  background: var(--color-purple-glow);
+  color: var(--color-purple);
+}
+
+.services__card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.services__card-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  margin-bottom: var(--space-xs);
+  color: var(--color-gray-800);
+}
+
+.services__card-desc {
+  font-size: var(--fs-small);
+  color: var(--color-gray-500);
+  line-height: var(--lh-body);
+}
+
+/* ── Mobile ── */
+@media (max-width: 900px) {
+  .services__pane-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .services__image {
+    order: -1; /* Image always on top in mobile */
+  }
+
+  .services__tabs {
+    flex-direction: column;
+    padding: 0 var(--space-md);
+  }
+  
+  .services__tab {
+    text-align: center;
+  }
+}
