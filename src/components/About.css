@@ -72,14 +72,15 @@
 
 .about__method-title {
   font-size: var(--fs-h3);
+  font-weight: 700;
   margin-bottom: var(--space-xs);
   color: var(--color-gray-800);
 }
 
 .about__method-intro {
-  color: var(--color-gray-500);
+  color: var(--color-gray-600);
   margin-bottom: var(--space-lg);
-  font-size: var(--fs-small);
+  font-size: var(--fs-body);
 }
 
 .about__steps {
@@ -95,27 +96,29 @@
 }
 
 .about__step-number {
-  font-family: var(--font-display);
-  font-size: 2rem;
+  /* Fonte body para os números, mais legível e moderno */
+  font-family: var(--font-body);
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--color-teal);
-  opacity: 0.3;
+  opacity: 0.6;
   line-height: 1;
   flex-shrink: 0;
-  width: 50px;
+  width: 46px;
 }
 
 .about__step-content h4 {
   font-family: var(--font-body);
   font-size: var(--fs-body);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-gray-800);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .about__step-content p {
   font-size: var(--fs-small);
-  color: var(--color-gray-500);
+  /* Aumentar contraste: gray-600 em vez de gray-500 */
+  color: var(--color-gray-600);
   line-height: var(--lh-body);
 }
 
@@ -124,5 +127,16 @@
   .about__grid {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+  }
+
+  /* Empilhar número em cima do texto no mobile */
+  .about__step {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .about__step-number {
+    width: auto;
+    font-size: 1.3rem;
   }
 }

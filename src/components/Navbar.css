@@ -34,16 +34,15 @@
   z-index: 1001;
 }
 
-.navbar__logo-text {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-white);
-  transition: color var(--transition-base);
+.navbar__logo-img {
+  height: 54px;
+  width: auto;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-sm);
 }
 
-.navbar--scrolled .navbar__logo-text {
-  color: var(--color-teal);
+.navbar--scrolled .navbar__logo-img {
+  height: 46px;
 }
 
 .navbar__links {

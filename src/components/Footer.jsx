@@ -1,4 +1,4 @@
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/Logo-CorpusFisio.jpeg'
 import './Footer.css'
 
 export default function Footer() {

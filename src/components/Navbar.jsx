@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logo from '../assets/images/Logo-CorpusFisio.jpeg'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -33,7 +34,7 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <a href="#hero" className="navbar__logo" onClick={(e) => handleNavClick(e, 'hero')}>
-          <span className="navbar__logo-text">CorpusFisio</span>
+          <img src={logo} alt="CorpusFisio Logo" className="navbar__logo-img" />
         </a>
 
         <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
