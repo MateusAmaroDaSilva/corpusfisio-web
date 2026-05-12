@@ -2,13 +2,13 @@
 
 Landing page de alta conversão desenvolvida para a clínica **CorpusFisio**. 
 
-### 🚀 Tecnologias
+### Tecnologias
 - React.js
 - Vite
 - CSS3 (Custom Design System)
 - Framer Motion (Animações de Scroll)
 
-### ✨ Diferenciais
+### Diferenciais
 - Design responsivo (Mobile First)
 - Estética Premium "Organic Luxury Health"
 - Otimização para agendamentos via WhatsApp
